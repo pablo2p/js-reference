@@ -1,0 +1,131 @@
+.contentContainer {
+  width: 100vw;
+  height: 100vh;
+  background: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.contentContainer header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contentContainer header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--font-color);
+  font-weight: 500;
+}
+
+.contentContainer header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contentContainer header h1 {
+  font-size: 5.6rem;
+  font-weight: 700;
+  color: #fffa4d;
+  line-height: 100%;
+  text-align: center;
+}
+
+.contentContainer header p {
+  font-size: 1.15rem;
+  color: var(--font-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contentContainer header p a,
+.contentContainer header p strong {
+  color: #fffda7;
+  font-weight: 500;
+}
+
+.contentContainer header p:nth-child(2) {
+  width: 60vw;
+  min-width: 545px;
+  text-align: center;
+}
+
+.contentContainer header div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--input-background);
+
+  padding: 21px 15px;
+  border-radius: 6px;
+  width: 80%;
+}
+
+.contentContainer header div input {
+  height: 100%;
+  flex: 1;
+  color: var(--font-color-secondary);
+  font-size: 0.9rem;
+  background: transparent;
+  margin-left: 10px;
+  border: 0;
+  outline: 0;
+
+  &::placeholder {
+    color: var(--font-color-secondary);
+  }
+}
+
+.contentContainer header div svg {
+  color: var(--font-color);
+  font-size: 1.4rem;
+  margin-right: 8px;
+
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.contentContainer header div svg:hover {
+  opacity: 0.8;
+}
+
+.contentContainer header div ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+}
+
+.contentContainer section ul li {
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: tomato;
+}
+
+.contentContainer footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contentContainer footer nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
