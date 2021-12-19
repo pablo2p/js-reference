@@ -9,45 +9,17 @@ import { GetStaticProps } from 'next';
 
 interface methodsProps {
   category: String;
-  subcategory: String[];
   description: String;
   title: String;
-  suggestions?: String[];
 }
 
 interface techProps {
   tech: methodsProps[];
 }
 
-export default function Home({ tech }: techProps) {
+export default function Method({ tech }: techProps) {
   const [search, setSearch] = useState('');
   const [listTechs, setListTechs] = useState(tech);
-
-  useEffect(() => {
-    if (!search) {
-      setListTechs(tech);
-      return;
-    }
-
-    const normalizeText = (text: String) =>
-      text
-        .toLowerCase()
-        .normalize('NFD')
-        .replace(/([\u0300-\u036f]|[^0-9a-zA-Z])/g, '');
-
-    const findSearch = (text) =>
-      normalizeText(text).indexOf(normalizeText(search)) !== -1;
-
-    const findTechs = tech?.filter(
-      (el) =>
-        findSearch(el.title) ||
-        findSearch(el.category) ||
-        findSearch(el.subcategory.join(',')) ||
-        (el.suggestions && findSearch(el.suggestions.join(',')))
-    );
-
-    setListTechs(findTechs);
-  }, [search]);
 
   return (
     <>
@@ -88,13 +60,11 @@ export default function Home({ tech }: techProps) {
           </div>
         </header>
         <section>
-          {listTechs?.length > 0 ? (
-            <ul className={styles.contentScroll}>
+          {listTechs && listTechs.length > 0 ? (
+            <ul>
               {listTechs?.map((dado, index) => (
                 <li key={index}>
-                  <a href="www.google.com">
-                    <h4>{dado['title']}</h4>
-                  </a>
+                  <h3>{dado.title}</h3>
                 </li>
               ))}
             </ul>
@@ -125,13 +95,3 @@ export default function Home({ tech }: techProps) {
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps<techProps> = async () => {
-  const dados = await import('./api/dados.json');
-  return {
-    props: {
-      tech: dados['javascript'],
-    },
-    revalidate: 60 * 60 * 24, // 24 hours
-  };
-};

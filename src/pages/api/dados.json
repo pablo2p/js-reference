@@ -2,9 +2,435 @@
   "javascript": [
     {
       "category": "The Global Object",
-      "subcategory": ["Value Properties"],
+      "subcategory": ["Value"],
       "title": "NaN",
       "description": "A propriedade global NaN é um valor especial que significa Not-A-Number (não é um número)."
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Value"],
+      "title": "Infinity",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Value"],
+      "title": "undefined",
+      "description": ""
+    },
+
+    {
+      "category": "The Global Object",
+      "subcategory": ["Function"],
+      "title": "eval",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Function"],
+      "title": "parseInt",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Function"],
+      "title": "parseFloat",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Function"],
+      "title": "isNaN",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Function"],
+      "title": "isFinite",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Function"],
+      "title": "decodeURI",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Function"],
+      "title": "decodeURIComponent",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Function"],
+      "title": "encodeURI",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Function"],
+      "title": "encodeURIComponent",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Function"],
+      "title": "escape",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Function"],
+      "title": "unescape",
+      "description": ""
+    },
+
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "Object",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "Function",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "Array",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "ArrayBuffer",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "String",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "Boolean",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "Number",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "DataView",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "Date",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "Promise",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "RegExp",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "Map",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "WeakMap",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "Set",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "WeakSet",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "SharedArrayBuffer",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "Symbol",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "Error",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "EvalError",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "RangeError",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "ReferenceError",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "SyntaxError",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "TypeError",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Constructor"],
+      "title": "URIError",
+      "description": ""
+    },
+
+    {
+      "category": "The Global Object",
+      "subcategory": ["Other"],
+      "title": "Atomics",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Other"],
+      "title": "Math",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Other"],
+      "title": "JSON",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Other"],
+      "title": "Reflect",
+      "description": ""
+    },
+    {
+      "category": "The Global Object",
+      "subcategory": ["Other"],
+      "title": "Proxy",
+      "description": ""
+    },
+
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "getPrototypeOf",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "setPrototypeOf",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "getOwnPropertyDescriptor",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "getOwnPropertyDescriptors",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "getOwnPropertyNames",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "getOwnPropertySymbols",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "assign",
+      "description": "",
+      "suggestions": ["Object.assign", "merge objects"]
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "create",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "defineProperty",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "defineProperties",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "entries",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "is",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "keys",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "values",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "seal",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "isSealed",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "freeze",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "isFrozen",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "preventExtensions",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Constructor", "Function"],
+      "title": "isExtensible",
+      "description": ""
+    },
+
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Prototype", "Function"],
+      "title": "toString",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Prototype", "Function"],
+      "title": "toLocaleString",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Prototype", "Function"],
+      "title": "valueOf",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Prototype", "Function"],
+      "title": "hasOwnProperty",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Prototype", "Function"],
+      "title": "isPrototypeOf",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Prototype", "Function"],
+      "title": "propertyIsEnumerable",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Prototype", "Function"],
+      "title": "__defineGetter__",
+      "description": ""
+    },
+    {
+      "category": "The Object Object",
+      "subcategory": ["Object Prototype", "Function"],
+      "title": "__defineSetter__",
+      "description": ""
     }
   ]
 }

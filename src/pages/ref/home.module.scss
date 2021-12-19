@@ -1,12 +1,12 @@
 .contentContainer {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background: var(--background);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 40px 40px 0;
+  padding: 40px;
 }
 
 .contentContainer header {
@@ -100,12 +100,6 @@
   opacity: 0.8;
 }
 
-.contentContainer > section {
-  margin-top: 30px;
-  max-height: 55vh;
-  padding-right: 15px;
-}
-
 .contentContainer section > h5 {
   margin-top: 30px;
   font-size: 1rem;
@@ -113,36 +107,22 @@
 }
 
 .contentContainer section ul {
+  margin-top: 30px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 15px;
   list-style: none;
-  flex-wrap: wrap;
-  overflow-y: auto;
-  height: 100%;
-  width: 100%;
 }
 
 .contentContainer section ul li {
-  padding: 12px 25px;
+  padding: 10px 22px;
+  font-size: 0.4rem;
   display: flex;
   align-items: center;
-  font-size: 1rem;
   justify-content: center;
   background-color: var(--input-background);
   border-radius: 4px;
-
-  cursor: pointer;
-  transition: all 0.1s;
-
-  flex-grow: 1;
-  max-width: 300px;
-
-  &:hover {
-    background: #fffa4d;
-    color: var(--background);
-  }
 }
 
 .contentContainer footer {
@@ -151,7 +131,6 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  min-height: 100px;
 }
 
 .contentContainer footer nav {
@@ -159,26 +138,4 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-}
-
-/* customize scrollbar css */
-.contentScroll::-webkit-scrollbar {
-  width: 20px;
-  background: var(--input-background);
-}
-.contentScroll::-webkit-scrollbar:horizontal {
-  background: var(--input-background);
-}
-.contentScroll::-webkit-scrollbar-track {
-  border-left: 12px solid var(--background);
-}
-.contentScroll::-webkit-scrollbar-thumb {
-  background-color: #575757;
-  border-left: 12px solid var(--background);
-}
-.contentScroll::-webkit-scrollbar-thumb:hover {
-  background-color: #575757;
-}
-.contentScroll::-webkit-scrollbar-thumb:active {
-  background-color: #575757;
 }
