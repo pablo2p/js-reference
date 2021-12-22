@@ -1,9 +1,5 @@
 ---
-title: 'Getting Started with NextJS'
-date: '2022-10-16'
-image: https://observatoriodocinema.uol.com.br/wp-content/uploads/2021/07/dragon-ball-super-1200x900-1.jpg
-excerpt: NextJS is a the React framework for production - it makes building fullstack React apps and sites a breeze and ships with built-in SSR.
-isFeatured: true
+title: 'Infinity'
 ---
 
 NextJS is a **framework for ReactJS**.

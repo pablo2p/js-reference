@@ -4,25 +4,21 @@
 
   > h1 {
     font-size: 3rem;
-    margin-bottom: calc(
-      var(--ifm-h1-vertical-rhythm-bottom) * var(--ifm-leading)
-    );
+    margin-bottom: calc(1.25 * calc(1.25 * 1rem));
   }
 
   blockquote,
   pre {
-    margin: 0 0 var(--ifm-spacing-vertical);
+    margin: 0 0 1rem;
   }
 
   blockquote {
-    border: 0 solid var(--ifm-blockquote-border-color);
-    border-left: var(--ifm-blockquote-border-left-width) solid
-      var(--ifm-blockquote-border-color);
-    box-shadow: var(--ifm-blockquote-shadow);
-    color: var(--ifm-blockquote-color);
-    font-size: var(--ifm-blockquote-font-size);
-    padding: var(--ifm-blockquote-padding-vertical)
-      var(--ifm-blockquote-padding-horizontal);
+    border: 0 solid #dadde1;
+    border-left: 2px solid #dadde1;
+    box-shadow: none;
+    color: #ebedf0;
+    font-size: 100%;
+    padding: 0 1rem;
 
     & > :last-child {
       margin-bottom: 0;
@@ -34,7 +30,7 @@
 
   > h2 {
     font-size: 2rem;
-    margin-top: calc(var(--ifm-h2-vertical-rhythm-top) * var(--ifm-leading));
+    margin-top: calc(2 * calc(1.25 * 1rem));
   }
 
   > h2,
@@ -42,13 +38,11 @@
   > h4,
   > h5,
   > h6 {
-    margin-bottom: calc(
-      var(--ifm-heading-vertical-rhythm-bottom) * var(--ifm-leading)
-    );
+    margin-bottom: calc(1 * calc(1.25 * 1rem));
   }
 
   p {
-    margin: 0 0 var(--ifm-paragraph-margin-bottom);
+    margin: 0 0 calc(1.25 * 1rem);
   }
 
   pre {
@@ -67,13 +61,13 @@
 
     > button {
       background: rgba(0, 0, 0, 0.3);
-      border-radius: var(--ifm-global-radius);
-      color: var(--ifm-color-white);
+      border-radius: 0.4rem;
+      color: #fff;
       opacity: 0;
       padding: 0.4rem 0.5rem;
       position: absolute;
-      right: calc(var(--ifm-pre-padding) / 2);
-      top: calc(var(--ifm-pre-padding) / 2);
+      right: calc(1rem / 2);
+      top: calc(1rem / 2);
       transition: opacity 0.2s ease-in-out;
       user-select: none;
       border: 0;
@@ -89,26 +83,27 @@
       code {
         background-color: rgb(41, 45, 62) !important;
         border: none;
-        padding: var(--ifm-pre-padding);
+        padding: 1rem;
         line-height: inherit !important;
       }
     }
   }
 
   > pre {
-    box-shadow: var(--ifm-global-shadow-lw);
-    margin-bottom: var(--ifm-leading) !important;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: calc(1.25 * 1rem) !important;
     overflow: hidden;
   }
 
   code {
-    background-color: var(--ifm-code-background) !important;
+    background-color: #333437 !important;
     border: 0.1rem solid rgba(0, 0, 0, 0.1);
-    border-radius: var(--ifm-code-border-radius) !important;
-    font-family: var(--ifm-font-family-monospace) !important;
-    font-size: var(--ifm-code-font-size);
-    padding: var(--ifm-code-padding-vertical) var(--ifm-code-padding-horizontal);
-    color: var(--ifm-color-gray-500) !important;
+    border-radius: 0.4rem !important;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+      'Courier New', monospace !important;
+    font-size: 90%;
+    padding: 0.1rem 0.1rem;
+    color: #bec3c9 !important;
     width: 100%;
     vertical-align: middle;
     line-height: initial !important;
@@ -116,20 +111,20 @@
   }
 
   > ul {
-    margin-bottom: var(--ifm-leading);
+    margin-bottom: calc(1.25 * 1rem);
     list-style: inside;
 
     li {
       word-wrap: break-word;
       & + li {
-        margin-top: var(--ifm-list-item-margin);
+        margin-top: 0.25rem;
       }
     }
   }
 
   a {
-    color: var(--ifm-link-color);
-    text-decoration: var(--ifm-link-decoration);
+    color: #fffa4d;
+    text-decoration: none;
 
     &:hover {
       text-decoration: underline;
