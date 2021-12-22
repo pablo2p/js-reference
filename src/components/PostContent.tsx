@@ -1,4 +1,5 @@
-import { MouseEvent, useRef } from 'react';
+import Link from 'next/link';
+import { MouseEvent } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
@@ -62,6 +63,22 @@ export default function PostContent({ post }: Props) {
             } else {
               return <pre>{children}</pre>;
             }
+          },
+          a: ({ node, children }) => {
+            const url = String(node.properties['href']);
+            const possibleDomains = ['localhost', 'jsreference'];
+            const checkHrefDomain = possibleDomains.some((domain) =>
+              url.toLowerCase().includes(domain.toLowerCase())
+            );
+            return checkHrefDomain ? (
+              <Link href={url}>
+                <a>{children}</a>
+              </Link>
+            ) : (
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                {children}
+              </a>
+            );
           },
           code({ className, children }) {
             const language = className && className.replace('language-', '');

@@ -92,11 +92,11 @@ export default function Home({ tech }: techProps) {
           {listTechs?.length > 0 ? (
             <ul className={styles.contentScroll}>
               {listTechs?.map((dado, index) => (
-                <li key={index}>
-                  <a href={`/${dado['title']}`}>
+                <Link key={index} href={`/${dado['title']}`}>
+                  <li>
                     <h4>{dado['title'].toLowerCase()}</h4>
-                  </a>
-                </li>
+                  </li>
+                </Link>
               ))}
             </ul>
           ) : (

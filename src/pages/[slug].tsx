@@ -15,7 +15,6 @@ interface Props {
 }
 
 export default function methodPosts({ post }: Props) {
-  console.log(post);
   return (
     <>
       <Head>
