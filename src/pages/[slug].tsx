@@ -1,35 +1,32 @@
-import { useEffect, useState } from 'react';
+import { GetStaticProps, GetStaticPropsContext, GetStaticPaths } from 'next';
 import Head from 'next/head';
-import { HiOutlineSearch } from 'react-icons/hi';
+import Link from 'next/link';
 
-import styles from './home.module.scss';
+import { getPostData, getPostsFiles } from '@lib/post-utils';
+import PostContent from '@components/PostContent';
+import { PostType } from '@interfaces/postTypes';
 
 import ReactTooltip from 'react-tooltip';
-import { GetStaticProps } from 'next';
+import { HiOutlineSearch } from 'react-icons/hi';
+import styles from '@styles/pages/slug.module.scss';
 
-interface methodsProps {
-  category: String;
-  description: String;
-  title: String;
+interface Props {
+  post: PostType;
 }
 
-interface techProps {
-  tech: methodsProps[];
-}
-
-export default function Method({ tech }: techProps) {
-  const [search, setSearch] = useState('');
-  const [listTechs, setListTechs] = useState(tech);
-
+export default function methodPosts({ post }: Props) {
+  console.log(post);
   return (
     <>
       <Head>
-        <title>Javascript Reference</title>
+        <title>
+          {post.title ? `${post.title} | ` : ''}Javascript Reference
+        </title>
       </Head>
       <main className={styles.contentContainer}>
         <ReactTooltip />
         <header>
-          <h1>JS Reference</h1>
+          <Link href="./">JS Reference</Link>
           <p>
             Buque por objetos, funções e propriedades suportados pelo mecanismo{' '}
             <strong
@@ -51,26 +48,15 @@ export default function Method({ tech }: techProps) {
             </a>
           </p>
           <div>
-            <input
-              onKeyUp={(e) => setSearch(e.currentTarget.value)}
-              type="text"
-              placeholder="Buscar por..."
-            />
+            <input type="text" placeholder="Buscar por..." />
             <HiOutlineSearch />
           </div>
         </header>
         <section>
-          {listTechs && listTechs.length > 0 ? (
-            <ul>
-              {listTechs?.map((dado, index) => (
-                <li key={index}>
-                  <h3>{dado.title}</h3>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <h5>Não foram encontrados resultados para a sua busca!</h5>
-          )}
+          <div>
+            <PostContent post={post} />
+          </div>
+          <div>...</div>
         </section>
         <footer>
           <a href="">Criado por Pablo Paixão</a>
@@ -95,3 +81,26 @@ export default function Method({ tech }: techProps) {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async (
+  context: GetStaticPropsContext
+) => {
+  let { slug } = context.params;
+  slug = String(slug).toLowerCase();
+  const postData = getPostData(slug);
+  return {
+    props: {
+      post: postData,
+    },
+    revalidate: 600,
+  };
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const postFilenames = getPostsFiles();
+  const slugs = postFilenames.map((fileName) => fileName.replace(/\.md$/, ''));
+  return {
+    paths: slugs.map((slug) => ({ params: { slug: slug } })),
+    fallback: false,
+  };
+};

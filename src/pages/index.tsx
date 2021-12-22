@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { HiOutlineSearch } from 'react-icons/hi';
 
-import styles from './home.module.scss';
+import styles from '@styles/pages/home.module.scss';
 
 import ReactTooltip from 'react-tooltip';
 import { GetStaticProps } from 'next';
+import Link from 'next/link';
 
 interface methodsProps {
   category: String;
@@ -57,7 +58,7 @@ export default function Home({ tech }: techProps) {
       <main className={styles.contentContainer}>
         <ReactTooltip />
         <header>
-          <h1>JS Reference</h1>
+          <Link href="./">JS Reference</Link>
           <p>
             Buque por objetos, funções e propriedades suportados pelo mecanismo{' '}
             <strong
@@ -92,8 +93,8 @@ export default function Home({ tech }: techProps) {
             <ul className={styles.contentScroll}>
               {listTechs?.map((dado, index) => (
                 <li key={index}>
-                  <a href="www.google.com">
-                    <h4>{dado['title']}</h4>
+                  <a href={`/${dado['title']}`}>
+                    <h4>{dado['title'].toLowerCase()}</h4>
                   </a>
                 </li>
               ))}
